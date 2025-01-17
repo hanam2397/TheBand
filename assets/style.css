@@ -1,0 +1,634 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* NGUYÊN TẮC
+1. từ ngoài vào trong
+2. từ trên xuống dưới
+3. tổng quan đến chi tiết
+ */
+
+/*  
+1. vị trí
+3. kích thước
+4. màu sắc 
+5. kiểu dáng
+*/
+
+#main {
+    overflow: hidden;
+    /* max-width:100%; */
+}
+
+.clear {
+    clear: both;
+}
+ 
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: #000;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav li {
+    display: inline-block;
+    position: relative;
+}
+
+
+/* tự code */
+#nav .subnav {
+    /* ẩn */
+    display: none;
+    /* hiện display: block;*/
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+/* hết tự code */
+
+#nav a {
+    color: white;
+    text-decoration-line: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+}
+
+#nav>li>a {
+    text-transform: uppercase;
+}
+
+/* tự code */
+#nav .subnav a {
+    color: #000;
+    width: 100%;
+}
+
+/* nếu hover vào li thì phần tử con của nó sẽ hiện */
+/* vị trí:hover class thực hiện câu lệnh {cú pháp câu lệnh} */
+#nav li:hover .subnav {
+    display: block;
+}
+
+
+#nav .subnav>li {
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+
+}
+
+
+/* hết tự code */
+
+#nav>li:hover>a {
+    color: #000;
+    background-color: #ccc;
+}
+
+/* tự code */
+#nav .subnav>li:hover a {
+    background-color: #ccc;
+}
+
+/* hết tự code */
+
+#nav .icon-button-down {
+    font-size: 12px;
+}
+
+.search-button, .menu-mobile-btn {
+    float: right;
+    line-height: 46px;
+    padding: 0 19px;
+}
+
+.search-button-icon, .menu-icon {
+    color: white;
+}
+
+.search-button:hover {
+    background-color: #f44336 !important;
+    cursor: pointer;
+}
+
+.menu-mobile-btn:hover {
+    background-color: #ccc !important;
+}
+
+.menu-mobile-btn:hover .menu-icon{
+    color: #000 !important;
+}
+
+
+
+/* --------------------slider-------------------- */
+#slider {
+    margin-top: 46px;
+    /* width: 100%;
+    height: auto;
+    object-fit: cover; */
+    /* min-height: 1500px; */
+    /* padding-top: 50%; 
+
+    /* lúc nào chiều cao cũng bằng 50% chiều ngang */
+
+    background-color: silver;
+    background: url('./img/slider-1.jpg') top center no-repeat;
+    position: relative;
+}
+
+#slider img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+#slider .text-content {
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    /* cho chữ ra giữa */
+}
+
+
+#slider .text-big-heading {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 10px 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#slider .text-mini-heding {
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+
+#slider .text-content h2 {
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------content-------------------- */
+
+.width {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.height {}
+
+.half {
+    width: 49.99999%;
+}
+
+.full {
+    width: 100%;
+}
+
+.third {
+    width: 33.33333%;
+}
+
+.padding-32 {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+}
+
+.padding-64 {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+.margin-bottom {
+    margin-bottom: 16px !important;
+}
+
+.float-left {
+    float: left;
+}
+
+
+
+
+
+#content .content-container {
+    text-align: justify;
+    padding-left: 16px;
+    padding-right: 8px;
+}
+
+#content .main-text-content {
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+
+#content h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#content .sub-text-content {
+    font-style: italic;
+    text-align: center;
+    opacity: 0.60;
+}
+
+#content p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+#content .list-member {
+    display: flex;
+    text-align: center;
+}
+
+
+
+
+#content .list-member p {
+    text-align: center;
+}
+
+#content .list-member img {
+    width: 154px;
+    height: 154px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+
+.color-white {
+    color: white;
+}
+
+.color-black {
+    background-color: black;
+}
+
+#content .backgroud-tour {
+    display: block;
+}
+
+#content .calendar-content {
+    background-color: white;
+    border: 1px solid #ccc
+}
+
+#content .calendar-content ul {
+    list-style: none;
+
+}
+
+#content .calendar-content li {
+    display: list-item;
+    font-size: 15px;
+    color: #757575 !important;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 16px;
+}
+
+#content .status-soldout {
+    font-size: 15px;
+    color: white;
+    background-color: #f44336 !important;
+    margin-left: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+#content .status-available {
+    color: white;
+    float: right !important;
+    margin-right: 16px;
+    /* margin-bottom: 10px; */
+    background-color: black;
+    border-radius: 50%;
+    /* display: inline-block; */
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+}
+
+#content .places-content {
+    margin: 0 -8px;
+}
+
+#content .places-clone {
+    /* display: block; */
+
+    padding: 0 8px;
+    margin-bottom: 16px;
+    float: left;
+    width: 33.3333%;
+    text-align: justify;
+
+
+
+    /* background-color: #fff; */
+
+}
+
+#content .places-clone img {
+    width: 100%;
+    display: block;
+}
+
+#content .places-container {
+    color: #000;
+    background-color: #fff;
+    padding: 0.01em 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+#content .places-container h3 {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.opacity {
+    opacity: 0.60;
+}
+
+#content .btn-buy-tickets {
+    background-color: #000;
+    color: #fff;
+    text-decoration-line: none;
+    padding: 8px 16px;
+    border: none;
+}
+
+#content .btn-buy-tickets:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+
+
+/* --------------------MODAL-------------------- */
+
+.modal.open {
+    display: flex;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal .modal-container {
+    position: relative;
+    width: 900px;
+    background-color: #fff;
+    animation: modalFadeIn ease 0.5s;
+}
+
+
+
+.modal .modal-header {
+    background-color: #009688;
+}
+
+.modal .modal-header-text {
+    letter-spacing: 4px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.modal .modal-header-text i {
+    margin-right: 10px;
+}
+
+.modal .modal-close {
+    color: #fff;
+    /* font-size: 24px; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8px 8px;
+    text-align: center;
+}
+
+.modal .modal-close:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.modal .modal-body {
+    padding: 16px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.modal .modal-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal .modal-body input {
+    border: 1px solid #ccc !important;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+
+}
+
+.modal .modal-body button {
+    color: #fff;
+    background-color: #009688;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.modal .modal-body button:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.modal .modal-footer {
+    padding: 0 16px 16px 16px;
+    font-size: 15px;
+    float: right;
+}
+
+/* --------------------contact-------------------- */
+#content .contact-container-left {
+    font-size: 18px !important;
+
+}
+
+.contact-container-left i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.row-padding {
+    padding: 0 8px;
+}
+
+.contact-in4-customer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-customer {
+    margin-left: 13px;
+}
+
+.contact-container-right input {
+    border: 1px solid #ccc !important;
+    padding: 8px;
+
+}
+
+.contact-container-right .contact-message {
+    /* padding: 8px; */
+    margin-top: 10px;
+
+}
+
+.contact-container-right .message-customer {
+    width: 100%;
+}
+
+.btn-contact {
+    color: #fff;
+    background-color: #000;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    float: right;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-contact:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+#content .content-map img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* --------------------footer-------------------- */
+#footer {
+    /* display: block; */
+    color: #000;
+    text-align: center;
+    background-color: #f1f1f1;
+    opacity: 0.6;
+    /* height: 1000px;
+    width: 100%; */
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+#footer i {
+    font-size: 24px;
+}
+
+#footer i:hover {
+    opacity: 0.3;
+}
+
+#footer p {
+    font-size: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+
+
+
+
+/* --------------------script-------------------- */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}

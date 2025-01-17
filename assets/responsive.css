@@ -1,0 +1,37 @@
+/* --------------------responsive-------------------- */
+/* //INFO
+pc >= 1024px
+tablet >= 740px & <1024px
+mobile < 740px */
+
+/* BREAK POIN */
+/* pc */
+@media (min-width: 1024px){
+    #header .menu-mobile-btn{
+        display: none !important;
+    }
+}
+
+/* tablet */
+@media (max-width: 740px) and (max-width: 1023px){
+    #header .menu-mobile-btn{
+        display: none !important;
+    }
+}
+
+/* moblie */
+@media (max-width: 739px){
+
+    .search-button {
+        display: none !important;
+    }
+    .menu-mobile-btn{
+        display: block !important;
+    }
+    
+    #nav li {
+        display: block !important;
+    }
+
+    
+}
